@@ -70,9 +70,9 @@ echo ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 cp ${WEB_DIR}/index.php ${WEB_DIR}/index.php.org
 sed -e 's/\"manga\"/\"'"${MANGA_DIR_NAME}"'\"/' ${WEB_DIR}/index.php.org > ${WEB_DIR}/index.php
 
-cp ${WEB_DIR}/handler.php ${WEB_DIR}/handler.php.org
+cp ${WEB_DIR}/local_handler.php ${WEB_DIR}/local_handler.php.org
 TMP=$(echo ${MANGA_PARENT_PATH} | sed 's/\//\\\//g')
-sed -e 's/\"\/volume1\"/\"'"${TMP}"'\"/' ${WEB_DIR}/handler.php.org > ${WEB_DIR}/handler.php
+sed -e 's/\"\/volume1\"/\"'"${TMP}"'\"/' ${WEB_DIR}/local_handler.php.org > ${WEB_DIR}/local_handler.php
 
 cp ${WEB_DIR}/conf/httpd.conf-comix ${WEB_DIR}/conf/httpd.conf-comix.org
 sed -e 's/manga/'"${MANGA_DIR_NAME}"'/' ${WEB_DIR}/conf/httpd.conf-comix.org > ${WEB_DIR}/conf/httpd.conf-comix

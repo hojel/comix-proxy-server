@@ -4,6 +4,8 @@ Listen 31257
   AllowEncodedSlashes On
   DirectoryIndex index.php
   AliasMatch ^/welcome.102(.*)$ /var/services/web/comix-server/welcome.php
-  AliasMatch ^/manga(.*)$ /var/services/web/comix-server/handler.php
+  AliasMatch ^/manga(.*)$ /var/services/web/comix-server/local_handler.php
+  AliasMatch ^/hitomi(.*)$ /var/services/web/comix-server/hitomi_handler.php
+  AliasMatch ^/zangsisi(.*)$ /var/services/web/comix-server/zangsisi_handler.php
 </VirtualHost>
 
